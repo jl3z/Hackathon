@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Waldo",
+  "version": "1.0",
+  "description": "Where's Waldo?",
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["main.js"],
+      "css": ["style.css"]
+    }
+  ]
+}
