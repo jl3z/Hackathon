@@ -39,7 +39,33 @@ waldo.style.top = `${random(bodyHeight)}px`;
 let foundTimes = 0;
 // add on click event listener for waldo
 waldo.addEventListener('click', (e) => {
-  alert(`I've been clicked! You found me ${++foundTimes} times!`);
+  if (foundTimes < 3) confirm(`You found me! Do you want to play again? 🤪`);
+  else if (foundTimes === 3)
+    confirm(
+      `Okay, I was going easy on you...  now there's no way you'll find me! 😶‍🌫️`
+    );
+  else if (foundTimes === 4) confirm(`I underestimated you 🧐`);
+  else if (foundTimes === 5)
+    confirm(
+      `You found me ${foundTimes} times! Are you sure you want to keep looking? 😎`
+    );
+  else if (foundTimes === 6)
+    confirm(
+      "Good for you, I'm done playing now... I bet you won't see me anymore. 🫥"
+    );
+  else if (foundTimes === 7)
+    confirm(
+      "I'm actually done playing now... Like really, I'm leaving. Goodbye! 😘"
+    );
+  else if (foundTimes === 8)
+    confirm('I told you I was leaving. Why did you look for me again? 😤');
+  else if (foundTimes === 9) confirm("Aren't you getting bored? 🥱");
+  else if (foundTimes === 10)
+    confirm(
+      `I cant leave until you stop playing! Finding me ${foundTimes} times is not enough for you?!? 🤨`
+    );
+  else confirm(`... ${foundTimes} 💅`);
+  foundTimes++;
   waldoHeight = waldoHeight / 1.5;
   waldo.setAttribute('height', `${waldoHeight}px`);
   waldo.style.left = `${random(bodyWidth)}px`;
