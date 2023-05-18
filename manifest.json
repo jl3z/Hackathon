@@ -5,9 +5,15 @@
   "description": "Where's Waldo?",
   "content_scripts": [
     {
-      "matches": ["https://www.youtube.com/*"],
+      "matches": ["<all_urls>"],
       "js": ["main.js"],
       "css": ["style.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["pngegg.png"],
+      "matches": ["<all_urls>"]
     }
   ]
 }
